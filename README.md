@@ -3,6 +3,8 @@ Node reverse image search script modified for isciiBot, but includes more stuff 
 Returns:
   the first five search items' url, title, resolution, image sample url, and description.
 
+Disclaimer: Tested with low sample size. Might not always work as intended.
+
 Example:
 ```
 const reverseImageSearch = require('node-reverse-image-search')
