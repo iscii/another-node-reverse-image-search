@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/iscii/another-node-reverse-image-search"
+    "url": "https://github.com/iscii/another-node-reverse-image-search.git"
   },
   "keywords": [
     "reverse",
@@ -21,5 +21,9 @@
     "search",
     "google",
     "node"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/iscii/another-node-reverse-image-search/issues"
+  },
+  "homepage": "https://github.com/iscii/another-node-reverse-image-search#readme"
 }
