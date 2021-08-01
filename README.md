@@ -1,7 +1,6 @@
 Node reverse image search script modified for isciiBot, but includes more stuff too
 
-Returns:
-  the first five search items' url, title, resolution, image sample url, and description.
+Returns the first five search items' url, title, resolution, image sample url, and description.
 
 Disclaimer: Tested with low sample size. Might not always work as intended.
 
