@@ -5,7 +5,6 @@ module.exports = (async (imageUrl, callback) => {
 	const page = await browser.newPage();
 	await page.goto('https://www.google.com/searchbyimage?image_url=' + encodeURIComponent(imageUrl));
 	let images;
-	let i=0;
 	images = await page.evaluate(() => {
 		const span = 5; //this const might be variable; last time it worked with 4, now 5.
 		const desc = 6;
