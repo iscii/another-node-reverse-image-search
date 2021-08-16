@@ -10,17 +10,13 @@ module.exports = (async (imageUrl, callback) => {
 		const getres = (el) => {
 			const bodyspan = el.querySelectorAll("div div div span");
 			span = 5;
-			
-			if(bodyspan.length < 4){
+			if(!bodyspan[span] || bodyspan.length < 4){
 				span = 0;
-				return "No Res Found";
+				return "No Res Found"
 			}
 			if(bodyspan.length < 6){ //if span has less than 5 bodyspans, set span to 3 or 2. else leave it at 5
-				span = bodyspan[2] ? 2 : bodyspan[3] ? 3 : 0
-				if(bodyspan.length < 4 || span == 0){
-					span = 0;
-					return "No Res Found";
-				}
+				span = bodyspan[2] ? 2 : bodyspan[3] ? 3 : 0;
+				if(span === 0) return "No Res Found"
 			}
 			if(bodyspan[span].innerHTML == "Similar"){ //if span's content is "Similar", go to next span. Might have to do this with "Cached" as well.
 				span++;
@@ -30,7 +26,7 @@ module.exports = (async (imageUrl, callback) => {
 		//what are the dudes at google doing? the html is inconsistent as heck.
 		const getdesc = (el) => {
 			const bodyspan = el.querySelectorAll("div div div span");
-			if(span == 0) return "No Desc Found";
+			if(span == 0 || !bodyspan[span] || !bodyspan[span+1]) return "No Desc Found";
 			//if res has a span, it has a date.
 			if (bodyspan[span].innerHTML.includes("</span>")) {
 				//if res has a span amd if the div has more than 2 spans, desc has its own span. .match...length finds count of span end tags in the div's innerhtml.
