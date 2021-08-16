@@ -1,6 +1,6 @@
 {
   "name": "another-node-reverse-image-search",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "https://www.npmjs.com/package/node-reverse-image-search but different.",
   "main": "index.js",
   "scripts": {
