@@ -26,7 +26,7 @@ module.exports = (async (imageUrl, callback) => {
 		//what are the dudes at google doing? the html is inconsistent as heck.
 		const getdesc = (el) => {
 			const bodyspan = el.querySelectorAll("div div div span");
-			if(span == 0 || !bodyspan[span] || !bodyspan[span+1]) return "No Desc Found";
+			if(span == 0 || !bodyspan[span] || !bodyspan[span+1]) return "No Description Found";
 			//if res has a span, it has a date.
 			if (bodyspan[span].innerHTML.includes("</span>")) {
 				//if res has a span amd if the div has more than 2 spans, desc has its own span. .match...length finds count of span end tags in the div's innerhtml.
